@@ -1,0 +1,109 @@
+.profile-container {
+    max-width: 900px;
+    /* 👈 WIDTH INCREASED */
+    margin: 40px auto;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* MAIN ROW */
+.profile-view-row {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+/* LEFT */
+.profile-left {
+    flex: 0 0 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* RIGHT */
+.profile-right {
+    flex: 1;
+}
+
+.doctor-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0066cc;
+}
+
+/* TEXT */
+.doctor-name {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.clinic-title {
+    font-size: 14px;
+    color: #0066cc;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* INFO */
+.info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    background: #f5f7fa;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.info-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0066cc;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.info-value {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* BUTTON */
+.btn-edit {
+    width: 220px;
+    padding: 14px;
+    background: #0066cc;
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .profile-view-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-left {
+        margin-bottom: 20px;
+    }
+
+    .info-section {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-edit {
+        width: 100%;
+    }
+}

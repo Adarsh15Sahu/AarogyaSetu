@@ -1,0 +1,50 @@
+.item{
+    width: 97%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid gray;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.item .details{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+.attribute{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1rem;
+    color: black;
+}
+.values{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1rem;
+    color: gray;
+}
+.item .view{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.item .view button{
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}

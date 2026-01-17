@@ -1,0 +1,200 @@
+.rx-container {
+    width: 100%;
+}
+
+.rx-card {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.rx-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rx-header h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.rx-clinic {
+    text-align: right;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
+}
+
+.rx-box {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.rx-box h3 {
+    margin-bottom: 14px;
+}
+
+.rx-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.label {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+
+.rx-section {
+    margin-bottom: 20px;
+}
+
+.rx-section label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 70px;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    resize: none;
+}
+
+.rx-meds-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+ .rx-add {
+    flex: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+}
+
+.rx-medicine {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.rx-medicine input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+}
+
+.rx-remove {
+    background: #ef4444;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+
+.rx-sign {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 20px 0;
+    font-size: 17px;
+}
+
+
+.rx-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.rx-clear {
+    flex: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    background: #ffffff;
+}
+
+.rx-submit {
+    flex: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    border: none;
+    background: #38bdf8;
+    color: white;
+    font-weight: 500;
+}
+
+
+.patient-id-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 69vh;
+}
+
+.patient-id-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.patient-id-card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #1f2937;
+}
+
+.patient-id-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.patient-id-card button {
+    padding: 12px 24px;
+    background: #38bdf8;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.patient-id-card button:hover {
+    background: #0ea5e9;
+}

@@ -1,0 +1,42 @@
+.dashboard {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #f5f7fa;
+    overflow: hidden;
+}
+
+.dashboard-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 24px;
+    padding-top: 40px;
+    overflow-y: auto;
+    background: #ffffff;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.empty-state {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+        
+        font-size: 2.9rem;
+        color: #333333;
+        margin-bottom: 10px;
+    }
+
+    p {
+        
+        font-size: 1rem;
+        color: #333333;
+    }
+}
