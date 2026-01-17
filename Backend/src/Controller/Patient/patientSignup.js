@@ -22,7 +22,7 @@ exports.patientSignup = async (req, res) => {
 
         const token = jwt.sign(
             { id: newPatient._id, role: newPatient.role },
-            process.env.REACT_APP_JWT_SECRET,
+            process.env.JWT_SECRET,
             { expiresIn: '2h' }
         )
 

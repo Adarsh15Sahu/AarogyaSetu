@@ -24,8 +24,8 @@ exports.patientsLogin = async (req, res) => {
                 id: patient._id,
                 role: patient.role
             },
-            process.env.REACT_APP_JWT_SECRET,
-            {expiresIn: '2h'}
+            process.env.JWT_SECRET,
+            { expiresIn: '2h' }
         )
 
         res.status(200).json({
@@ -35,7 +35,7 @@ exports.patientsLogin = async (req, res) => {
             patient: {
                 id: patient._id,
                 patientcode: patient.patientcode,
-                role:"Patient"
+                role: "Patient"
             }
         });
     }

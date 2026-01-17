@@ -11,7 +11,7 @@ module.exports = function (req, res, next) {
         }
         console.log("AUTH HEADER:", req.headers.authorization);
 
-        const decoded = jwt.verify(token, process.env.REACT_APP_JWT_SECRET);
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded;
         next();
     }
