@@ -4,7 +4,7 @@ const api = axios.create({
     baseURL: import.meta.env.VITE_API_BASE_URL,
 })
 
-// 🔥 REQUEST INTERCEPTOR - Add auth token to all requests
+
 api.interceptors.request.use(
     (config) => {
         const token = localStorage.getItem("token");
@@ -24,7 +24,7 @@ api.interceptors.request.use(
     (error) => Promise.reject(error)
 );
 
-// 🔥 RESPONSE INTERCEPTOR
+
 api.interceptors.response.use(
     (response) => response,
     (error) => {
