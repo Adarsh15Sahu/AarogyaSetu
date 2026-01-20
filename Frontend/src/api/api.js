@@ -12,7 +12,7 @@ api.interceptors.request.use(
             config.headers.Authorization = `Bearer ${token}`;
         }
 
-        // Don't override Content-Type for FormData - let axios handle it
+        
         if (config.data instanceof FormData) {
             delete config.headers["Content-Type"];
         } else if (!config.headers["Content-Type"]) {
