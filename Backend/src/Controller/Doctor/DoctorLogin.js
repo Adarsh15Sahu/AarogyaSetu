@@ -12,7 +12,7 @@ exports.doctorLogin = async (req, res) => {
                 success: false
             })
         }
-        const isMatch = await bcrypt.compare(password, user.password);;
+        const isMatch = await bcrypt.compare(password, doctor.password);;
         
         if (!isMatch) {
             console.log("Invalid password");

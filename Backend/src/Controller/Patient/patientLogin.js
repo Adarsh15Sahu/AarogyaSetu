@@ -12,7 +12,7 @@ exports.patientsLogin = async (req, res) => {
                 success: false
             })
         }
-        const isMatch = await bcrypt.compare(password, user.password);
+        const isMatch = await bcrypt.compare(password, patient.password);
         if (! isMatch) {
             return res.status(400).json({
                 message: "Invalid Credentials",
