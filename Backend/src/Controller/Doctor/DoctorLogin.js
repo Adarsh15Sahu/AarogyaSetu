@@ -1,6 +1,6 @@
 const Doctors = require('../../models/Doctor');
 const jwt = require('jsonwebtoken');
-
+const bcrypt = require('bcrypt')
 exports.doctorLogin = async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -12,8 +12,9 @@ exports.doctorLogin = async (req, res) => {
                 success: false
             })
         }
-
-        if (doctor.password !== password) {
+        const isMatch = await bcrypt.compare(password, user.password);;
+        
+        if (!isMatch) {
             console.log("Invalid password");
             return res.status(400).json({
                 message: "Invalid Credentials",
@@ -27,7 +28,7 @@ exports.doctorLogin = async (req, res) => {
                 role: doctor.role
             },
             process.env.JWT_SECRET,
-            { expiresIn: '2h' }
+            { expiresIn: '24h' }
         )
 
         res.status(200).json({

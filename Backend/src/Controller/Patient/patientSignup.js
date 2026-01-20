@@ -1,6 +1,6 @@
 const Patients = require('..//../models/Patient');
 const jwt = require('jsonwebtoken');
-
+const bcrypt = require('bcrypt')
 exports.patientSignup = async (req, res) => {
 
     try {
@@ -12,18 +12,21 @@ exports.patientSignup = async (req, res) => {
 
             return res.status(400).json({ message: "Patient already exists", success: false });
         }
-
+        const hashedpassword = await bcrypt.hash(password, 10);
         const newPatient = new Patients({
             name,
             email,
-            password
+            password: hashedpassword
         })
         await newPatient.save();
 
         const token = jwt.sign(
-            { id: newPatient._id, role: newPatient.role },
+            {
+                id: newPatient._id,
+                role: newPatient.role
+            },
             process.env.JWT_SECRET,
-            { expiresIn: '2h' }
+            { expiresIn: '24h' }
         )
 
         res.status(200).json({

@@ -1,6 +1,6 @@
 const Doctors = require('../../models/Doctor');
 const jwt = require('jsonwebtoken');
-
+const bcrypt = require('bcrypt')
 exports.doctorSignup = async (req, res) => {
 
     try {
@@ -11,10 +11,11 @@ exports.doctorSignup = async (req, res) => {
         if (varify) {
             return res.status(400).json({ message: "Dotor already exists", success: false });
         }
+        const hashedpassword = await bcrypt.hash(password, 10); 
         const newDoctor = new Doctors({
             name,
             email,
-            password
+            password : hashedpassword
         })
         const token = jwt.sign(
             {
@@ -22,7 +23,7 @@ exports.doctorSignup = async (req, res) => {
                 role: newDoctor.role
             },
             process.env.JWT_SECRET,
-            { expiresIn: '2h' }
+            { expiresIn: '24h' }
         )
         await newDoctor.save();
         res.status(200).json({
